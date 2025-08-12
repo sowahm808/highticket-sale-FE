@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AsyncPipe, CommonModule, NgFor } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 
 @Component({
@@ -15,7 +15,7 @@ import { MatCardModule } from '@angular/material/card';
         <div class="space-y-2">
           <div *ngFor="let d of col.items" class="p-3 rounded-lg border border-gray-200 dark:border-neutral-700 bg-gray-50 dark:bg-neutral-900">
             <div class="font-medium">{{d.name}}</div>
-            <div class="text-sm text-gray-500">${{d.amount}}</div>
+            <div class="text-sm text-gray-500">&#36;{{d.amount}}</div>
           </div>
         </div>
       </div>
@@ -30,3 +30,4 @@ export class DealsBoardComponent {
     { title: 'Negotiation', items: [{ name: 'Initech Audit', amount: 9000 }] },
   ];
 }
+
